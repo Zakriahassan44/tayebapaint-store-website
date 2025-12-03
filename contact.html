@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Mashaer Tayba Trading | مشاعر طيبة للتجارة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo" id="logo">
+                <img src="https://logopond.com/logos/46e44107cf93eb4ec7be61743e9968b2.png" alt="Logo" class="logo-img">
+                Mashaer Tayba Trading
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="products.html" id="nav-products">Products</a></li>
+                <li><a href="contact.html" class="active" id="nav-contact">Contact Us</a></li>
+            </ul>
+            <div class="language-switcher" onclick="toggleLanguage()">
+                <span id="lang-text">العربية</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 id="page-title">Contact Us</h1>
+        <p id="page-subtitle">We'd love to hear from you</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="container contact-section">
+        <div class="contact-grid">
+            <!-- Contact Info -->
+            <div class="contact-info">
+                <h2 id="contact-info-title">Get in Touch</h2>
+                <p id="contact-info-desc">Feel free to reach out to us through any of the following methods:</p>
+                
+                <div class="contact-method">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h3 id="contact-whatsapp-title">WhatsApp</h3>
+                        <p>+966 50 818 5486</p>
+                        <a href="https://wa.me/966508185486?text=Hello!%20I%20want%20to%20contact%20you" target="_blank" class="btn btn-whatsapp" id="contact-whatsapp-btn">
+                            Chat Now
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h3 id="contact-location-title">Location</h3>
+                        <p id="contact-location-text">Al-Taghyeera Street, Al-Noor District, Buraidah, Saudi Arabia</p>
+                        <a href="https://maps.app.goo.gl/6w3YVETo9syPhAW26" target="_blank" class="btn btn-map" id="contact-map-btn">
+                            View on Map
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="contact-icon">⏰</div>
+                    <div>
+                        <h3 id="contact-hours-title">Business Hours</h3>
+                        <p id="contact-hours-text">Saturday - Thursday: 9:00 AM - 10:00 PM<br>Friday: 2:00 PM - 10:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="contact-form-wrapper">
+                <h2 id="contact-form-title">Send us a Message</h2>
+                <div class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name" id="label-name">Your Name</label>
+                        <input type="text" id="name" class="form-input" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone" id="label-phone">Phone Number</label>
+                        <input type="tel" id="phone" class="form-input" placeholder="+966" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message" id="label-message">Your Message</label>
+                        <textarea id="message" class="form-input" rows="5" required></textarea>
+                    </div>
+
+                    <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-primary btn-block" id="submit-btn">
+                        Send Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="location-section">
+        <div class="map-container">
+            <h2 class="section-title" id="map-title">Find Us Here</h2>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.9876123456789!2d43.971482!3d26.341299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjYCsDIwJzI4LjciTiA0M8KwNTgnMTcuMyJF!5e0!3m2!1sen!2ssa!4v1733184000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 id="footer-about-title">About Us</h3>
+                <p id="footer-about-text">Your trusted paint store in Saudi Arabia.</p>
+            </div>
+            <div class="footer-section">
+                <h3 id="footer-links-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-home">Home</a></li>
+                    <li><a href="products.html" id="footer-products">Products</a></li>
+                    <li><a href="contact.html" id="footer-contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 id="footer-contact-title">Contact</h3>
+                <p>📱 WhatsApp: +966 50 818 5486</p>
+                <p>📍 Saudi Arabia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer-text">© 2024 Mashaer Tayba Trading. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

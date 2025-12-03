@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Mashaer Tayba Trading | مشاعر طيبة للتجارة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo" id="logo">
+                <img src="https://logopond.com/logos/46e44107cf93eb4ec7be61743e9968b2.png" alt="Logo" class="logo-img">
+                Mashaer Tayba Trading
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" id="nav-home">Home</a></li>
+                <li><a href="products.html" class="active" id="nav-products">Products</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+            </ul>
+            <div class="language-switcher" onclick="toggleLanguage()">
+                <span id="lang-text">العربية</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1 id="page-title">Our Products</h1>
+        <p id="page-subtitle">Browse our collection of premium quality paints and services</p>
+    </section>
+
+    <!-- Products Section -->
+    <section class="container">
+        <div class="products-filter">
+            <h3 id="filter-title">Categories</h3>
+            <div class="filter-buttons">
+                <button class="filter-btn active" onclick="filterProducts('all')" id="filter-all">All Products</button>
+                <button class="filter-btn" onclick="filterProducts('premium')" id="filter-premium">Premium</button>
+                <button class="filter-btn" onclick="filterProducts('new')" id="filter-new">New Arrivals</button>
+                <button class="filter-btn" onclick="filterProducts('sale')" id="filter-sale">On Sale</button>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-container">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 id="footer-about-title">About Us</h3>
+                <p id="footer-about-text">Your trusted paint store in Saudi Arabia.</p>
+            </div>
+            <div class="footer-section">
+                <h3 id="footer-links-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-home">Home</a></li>
+                    <li><a href="products.html" id="footer-products">Products</a></li>
+                    <li><a href="contact.html" id="footer-contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 id="footer-contact-title">Contact</h3>
+                <p>📱 WhatsApp: +966 50 818 5486</p>
+                <p>📍 Saudi Arabia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer-text">© 2024 Mashaer Tayba Trading. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,293 +1,129 @@
-```html
-<!doctype html>
-<html lang="ar" dir="rtl">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>مشاعر طيبة للتجارة — Paint Store</title>
-  <style>
-    :root {
-      --accent: #0b63d6;
-      --muted: #667085;
-      --primary: #1a73e8;
-      --secondary: #f1f5f9;
-      --text: #0b1223;
-      --background: #f7f9fc;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, sans-serif;
-      margin: 0;
-      background: var(--background);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    * {
-      box-sizing: border-box;
-    }
-    header {
-      background: #fff;
-      border-bottom: 1px solid #e6edf8;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 22px;
-    }
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-    .logo {
-      font-weight: 700;
-      font-size: 24px;
-      color: var(--accent);
-    }
-    .navlinks a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    .navlinks a:hover {
-      color: var(--accent);
-    }
-    .lang-btn {
-      cursor: pointer;
-      padding: 8px 16px;
-      border-radius: 6px;
-      background: #e6edf8;
-      font-size: 14px;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    .lang-btn:hover {
-      background: var(--secondary);
-    }
-    .page {
-      display: none;
-      padding: 40px 0;
-    }
-    .page.active {
-      display: block;
-    }
-    .card {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
-      margin-bottom: 30px;
-    }
-    h1, h2 {
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    p {
-      margin-bottom: 16px;
-    }
-    /* Products Section */
-    .products-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .product-card {
-      background: white;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s;
-    }
-    .product-card:hover {
-      transform: translateY(-5px);
-    }
-    .product-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .product-info {
-      padding: 16px;
-    }
-    .product-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-    .product-desc {
-      font-size: 14px;
-      color: var(--muted);
-    }
-    .product-price {
-      font-size: 16px;
-      font-weight: bold;
-      color: var(--accent);
-      margin-top: 12px;
-    }
-    /* Contact Form */
-    .contact-form {
-      display: grid;
-      gap: 16px;
-    }
-    input, textarea {
-      padding: 12px;
-      border: 1px solid #e6edf8;
-      border-radius: 6px;
-      font-size: 14px;
-    }
-    button {
-      padding: 12px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-weight: 600;
-      transition: background 0.3s;
-    }
-    button:hover {
-      background: #0950b3;
-    }
-    /* Footer */
-    footer {
-      background: #fff;
-      border-top: 1px solid #e6edf8;
-      padding: 20px 0;
-      text-align: center;
-      font-size: 14px;
-      color: var(--muted);
-    }
-    /* Responsive */
-    @media (max-width: 768px) {
-      .navlinks {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .navlinks a {
-        margin: 8px;
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Mashaer Tayba Trading | مشاعر طيبة للتجارة</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="container">
-    <nav>
-      <div class="logo" data-ar="مشاعر طيبة للتجارة" data-en="Mashaer Tayba Trading">مشاعر طيبة للتجارة</div>
-      <div class="navlinks">
-        <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
-        <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
-        <a href="#products" data-ar="المنتجات" data-en="Products">المنتجات</a>
-        <a href="#contact" data-ar="اتصل بنا" data-en="Contact">اتصل بنا</a>
-      </div>
-      <div class="lang-btn" id="langToggle">EN</div>
-    </nav>
-  </div>
-</header>
-<main class="container">
-  <section id="home" class="page active">
-    <div class="card">
-      <h1 data-ar="مرحبًا بكم في مشاعر طيبة للتجارة" data-en="Welcome to Mashaer Tayba Trading">مرحبًا بكم في مشاعر طيبة للتجارة</h1>
-      <p data-ar="متجر متخصص في بيع الدهانات بجميع أنواعها وخدمات مزج الألوان. نقدم أفضل المنتجات لتحويل منزلك أو مكتبك إلى تحفة فنية." data-en="A specialized paint store offering all types of paints and color-mixing services. We provide the best products to transform your home or office into a masterpiece.">متجر متخصص في بيع الدهانات بجميع أنواعها وخدمات مزج الألوان. نقدم أفضل المنتجات لتحويل منزلك أو مكتبك إلى تحفة فنية.</p>
-    </div>
-  </section>
-  <section id="about" class="page">
-    <div class="card">
-      <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
-      <p data-ar="نحن مشاعر طيبة للتجارة، متخصصون في تقديم دهانات داخلية وخارجية عالية الجودة مع خدمة عملاء ممتازة. مع سنوات من الخبرة، نساعد عملائنا في اختيار الألوان المثالية وتقديم نصائح الخبراء." data-en="We are Mashaer Tayba Trading, specializing in high-quality interior and exterior paints with excellent customer service. With years of experience, we help our clients choose the perfect colors and provide expert advice.">نحن مشاعر طيبة للتجارة، متخصصون في تقديم دهانات داخلية وخارجية عالية الجودة مع خدمة عملاء ممتازة. مع سنوات من الخبرة، نساعد عملائنا في اختيار الألوان المثالية وتقديم نصائح الخبراء.</p>
-    </div>
-  </section>
-  <section id="products" class="page">
-    <div class="card">
-      <h2 data-ar="منتجاتنا" data-en="Our Products">منتجاتنا</h2>
-      <p data-ar="استعرض مجموعتنا الواسعة من الدهانات عالية الجودة. نحن نقدم خيارات متنوعة للداخل والخارج، مع خدمات مزج الألوان المخصصة." data-en="Browse our wide range of high-quality paints. We offer diverse options for interior and exterior, with custom color-mixing services.">استعرض مجموعتنا الواسعة من الدهانات عالية الجودة. نحن نقدم خيارات متنوعة للداخل والخارج، مع خدمات مزج الألوان المخصصة.</p>
-      <div class="products-grid">
-        <div class="product-card">
-          <img class="product-img" src="https://via.placeholder.com/300x200?text=Interior+Paint" alt="Interior Paint">
-          <div class="product-info">
-            <h3 class="product-title" data-ar="دهان داخلي" data-en="Interior Paint">دهان داخلي</h3>
-            <p class="product-desc" data-ar="دهان داخلي مقاوم للبقع وسهل التنظيف، متوفر في آلاف الألوان." data-en="Stain-resistant interior paint, easy to clean, available in thousands of colors.">دهان داخلي مقاوم للبقع وسهل التنظيف، متوفر في آلاف الألوان.</p>
-            <span class="product-price" data-ar="سعر: 150 ريال سعودي" data-en="Price: 150 SAR">سعر: 150 ريال سعودي</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <img class="product-img" src="https://via.placeholder.com/300x200?text=Exterior+Paint" alt="Exterior Paint">
-          <div class="product-info">
-            <h3 class="product-title" data-ar="دهان خارجي" data-en="Exterior Paint">دهان خارجي</h3>
-            <p class="product-desc" data-ar="دهان خارجي مقاوم للعوامل الجوية، يحمي جدرانك من الشمس والمطر." data-en="Weather-resistant exterior paint, protects your walls from sun and rain.">دهان خارجي مقاوم للعوامل الجوية، يحمي جدرانك من الشمس والمطر.</p>
-            <span class="product-price" data-ar="سعر: 200 ريال سعودي" data-en="Price: 200 SAR">سعر: 200 ريال سعودي</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <img class="product-img" src="https://via.placeholder.com/300x200?text=Primer" alt="Primer">
-          <div class="product-info">
-            <h3 class="product-title" data-ar="برايمر" data-en="Primer">برايمر</h3>
-            <p class="product-desc" data-ar="برايمر عالي الجودة لتحضير السطوح قبل الدهان، يضمن التصاق أفضل." data-en="High-quality primer for surface preparation, ensures better adhesion.">برايمر عالي الجودة لتحضير السطوح قبل الدهان، يضمن التصاق أفضل.</p>
-            <span class="product-price" data-ar="سعر: 100 ريال سعودي" data-en="Price: 100 SAR">سعر: 100 ريال سعودي</span>
-          </div>
-        </div>
-        <div class="product-card">
-          <img class="product-img" src="https://via.placeholder.com/300x200?text=Color+Mixing" alt="Color Mixing Service">
-          <div class="product-info">
-            <h3 class="product-title" data-ar="خدمة مزج الألوان" data-en="Color Mixing Service">خدمة مزج الألوان</h3>
-            <p class="product-desc" data-ar="مزج ألوان مخصص حسب احتياجاتك، باستخدام أحدث التقنيات." data-en="Custom color mixing according to your needs, using the latest technology.">مزج ألوان مخصص حسب احتياجاتك، باستخدام أحدث التقنيات.</p>
-            <span class="product-price" data-ar="سعر: يبدأ من 50 ريال سعودي" data-en="Price: Starting from 50 SAR">سعر: يبدأ من 50 ريال سعودي</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section id="contact" class="page">
-    <div class="card">
-      <h2 data-ar="اتصل بنا" data-en="Contact Us">اتصل بنا</h2>
-      <p data-ar="العنوان: شارع التغيرة، حي النور، بريدة — المملكة العربية السعودية" data-en="Address: Al-Taghyeera Street, Al-Noor District, Buraidah, Saudi Arabia">العنوان: شارع التغيرة، حي النور، بريدة — المملكة العربية السعودية</p>
-      <p data-ar="الهاتف: +966 50 818 5486" data-en="Phone: +966 50 818 5486">الهاتف: +966 50 818 5486</p>
-      <p data-ar="البريد: Onepir95@gmail.com" data-en="Email: Onepir95@gmail.com">البريد: Onepir95@gmail.com</p>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name / اسمك" required>
-        <input type="email" placeholder="Your Email / بريدك الإلكتروني" required>
-        <textarea placeholder="Your Message / رسالتك" rows="5" required></textarea>
-        <button type="submit" data-ar="إرسال" data-en="Send">إرسال</button>
-      </form>
-    </div>
-  </section>
-</main>
-<footer>
-  <div class="container">
-    <p data-ar="© 2025 مشاعر طيبة للتجارة. جميع الحقوق محفوظة." data-en="© 2025 Mashaer Tayba Trading. All rights reserved.">© 2025 مشاعر طيبة للتجارة. جميع الحقوق محفوظة.</p>
-  </div>
-</footer>
-<script>
-  const toggle = document.getElementById('langToggle');
-  let lang = 'ar';
-  toggle.onclick = () => {
-    lang = lang === 'ar' ? 'en' : 'ar';
-    toggle.textContent = lang === 'ar' ? 'EN' : 'عربي';
-    document.documentElement.lang = lang;
-    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-    document.querySelectorAll('[data-ar]').forEach(el => {
-      el.textContent = lang === 'ar' ? el.dataset.ar : el.dataset.en;
-    });
-  };
-  function showPage() {
-    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-    const sel = document.querySelector(location.hash) || document.querySelector('#home');
-    sel.classList.add('active');
-  }
-  window.onhashchange = showPage;
-  showPage();
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo" id="logo">
+                <img src="https://logopond.com/logos/46e44107cf93eb4ec7be61743e9968b2.png" alt="Logo" class="logo-img">
+                Mashaer Tayba Trading
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active" id="nav-home">Home</a></li>
+                <li><a href="products.html" id="nav-products">Products</a></li>
+                <li><a href="contact.html" id="nav-contact">Contact Us</a></li>
+            </ul>
+            <div class="language-switcher" onclick="toggleLanguage()">
+                <span id="lang-text">العربية</span>
+            </div>
+            <div class="hamburger" onclick="toggleMenu()">☰</div>
+        </nav>
+    </header>
 
-  // Simple form submission alert (for demo)
-  document.querySelector('.contact-form').addEventListener('submit', e => {
-    e.preventDefault();
-    alert(lang === 'ar' ? 'تم إرسال الرسالة!' : 'Message sent!');
-  });
-</script>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 id="hero-title">Welcome to Mashaer Tayba Trading</h1>
+            <p id="hero-subtitle">Quality paints and services at the best prices in Saudi Arabia</p>
+            <div class="hero-buttons">
+                <a href="products.html" class="btn btn-primary" id="btn-shop">
+                    🛍️ Shop Now
+                </a>
+                <a href="https://wa.me/966508185486?text=Hello!%20I%27m%20interested%20in%20your%20products" class="btn btn-whatsapp" id="btn-whatsapp" target="_blank">
+                    💬 Chat on WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="container features-section">
+        <h2 class="section-title" id="features-title">Why Choose Us</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3 id="feature1-title">Quality Products</h3>
+                <p id="feature1-desc">We offer only the highest quality paints</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🚚</div>
+                <h3 id="feature2-title">Fast Delivery</h3>
+                <p id="feature2-desc">Quick and reliable delivery across Saudi Arabia</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💯</div>
+                <h3 id="feature3-title">Best Prices</h3>
+                <p id="feature3-desc">Competitive prices with great deals</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎁</div>
+                <h3 id="feature4-title">Special Offers</h3>
+                <p id="feature4-desc">Regular promotions and exclusive discounts</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="container">
+        <h2 class="section-title" id="featured-title">Featured Products</h2>
+        <div class="products-grid" id="featured-products">
+            <!-- Products will be loaded by JavaScript -->
+        </div>
+        <div style="text-align: center; margin-top: 2rem;">
+            <a href="products.html" class="btn btn-secondary" id="view-all-btn">View All Products</a>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location-section" id="location">
+        <div class="map-container">
+            <h2 class="section-title" id="location-title">Visit Our Store</h2>
+            <p style="text-align: center; color: #666; font-size: 1.2rem; margin-bottom: 1rem;" id="location-subtitle">
+                Find us at our location in Saudi Arabia
+            </p>
+            <div class="map-wrapper">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.9876123456789!2d43.971482!3d26.341299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjYCsDIwJzI4LjciTiA0M8KwNTgnMTcuMyJF!5e0!3m2!1sen!2ssa!4v1733184000" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://maps.app.goo.gl/6w3YVETo9syPhAW26" target="_blank" class="btn btn-map" id="map-btn">
+                    📍 Open in Google Maps
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 id="footer-about-title">About Us</h3>
+                <p id="footer-about-text">Your trusted paint store in Saudi Arabia.</p>
+            </div>
+            <div class="footer-section">
+                <h3 id="footer-links-title">Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html" id="footer-home">Home</a></li>
+                    <li><a href="products.html" id="footer-products">Products</a></li>
+                    <li><a href="contact.html" id="footer-contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3 id="footer-contact-title">Contact</h3>
+                <p>📱 WhatsApp: +966 50 818 5486</p>
+                <p>📍 Saudi Arabia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p id="footer-text">© 2024 Mashaer Tayba Trading. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
-```
