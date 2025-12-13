@@ -14,6 +14,7 @@ const translations = {
         navHome: "Home",
         navProducts: "Products",
         navContact: "Contact Us",
+        navGallery: "Gallery",
         
         // Home Page
         heroTitle: "Welcome to Mashaer Tayba Trading",
@@ -35,8 +36,8 @@ const translations = {
         // Products
         featuredTitle: "Featured Products",
         viewAllBtn: "View All Products",
-        pageTitle: "Our Products",
-        pageSubtitle: "Browse our collection of premium quality paints and services",
+        productsPageTitle: "Our Products",
+        productsPageSubtitle: "Browse our collection of premium quality paints and services",
         filterTitle: "Categories",
         filterAll: "All Products",
         filterPremium: "Premium",
@@ -62,6 +63,10 @@ const translations = {
         labelMessage: "Your Message",
         submitBtn: "Send Message",
         
+        // Gallery
+        galleryPageTitle: "Our Gallery",
+        galleryPageSubtitle: "View images of our work and projects",
+        
         // Location
         locationTitle: "Visit Our Store",
         locationSubtitle: "Find us at our location in Saudi Arabia",
@@ -75,6 +80,7 @@ const translations = {
         footerHome: "Home",
         footerProducts: "Products",
         footerContact: "Contact Us",
+        footerGallery: "Gallery",
         footerContactTitle: "Contact",
         footerText: "© 2024 Mashaer Tayba Trading. All rights reserved.",
         
@@ -89,6 +95,7 @@ const translations = {
         navHome: "الرئيسية",
         navProducts: "المنتجات",
         navContact: "اتصل بنا",
+        navGallery: "المعرض",
         
         // Home Page
         heroTitle: "مرحباً بكم في مشاعر طيبة للتجارة",
@@ -110,8 +117,8 @@ const translations = {
         // Products
         featuredTitle: "المنتجات المميزة",
         viewAllBtn: "عرض جميع المنتجات",
-        pageTitle: "منتجاتنا",
-        pageSubtitle: "تصفح مجموعتنا من الدهانات والخدمات عالية الجودة",
+        productsPageTitle: "منتجاتنا",
+        productsPageSubtitle: "تصفح مجموعتنا من الدهانات والخدمات عالية الجودة",
         filterTitle: "الفئات",
         filterAll: "جميع المنتجات",
         filterPremium: "مميز",
@@ -137,6 +144,10 @@ const translations = {
         labelMessage: "رسالتك",
         submitBtn: "إرسال الرسالة",
         
+        // Gallery
+        galleryPageTitle: "معرضنا",
+        galleryPageSubtitle: "عرض صور أعمالنا ومشاريعنا",
+        
         // Location
         locationTitle: "زوروا متجرنا",
         locationSubtitle: "نحن في انتظاركم في المملكة العربية السعودية",
@@ -150,6 +161,7 @@ const translations = {
         footerHome: "الرئيسية",
         footerProducts: "المنتجات",
         footerContact: "اتصل بنا",
+        footerGallery: "المعرض",
         footerContactTitle: "التواصل",
         footerText: "© 2024 مشاعر طيبة للتجارة. جميع الحقوق محفوظة.",
         
@@ -215,6 +227,29 @@ const products = [
 ];
 
 // ========================================
+// GALLERY DATA
+// To add new images, upload your image files to your hosting (e.g., in an 'images' folder) and add entries here with the URL.
+// For example: { src: "images/mywork1.jpg", altEn: "My Work 1", altAr: "عملي 1", descriptionEn: "Description of work 1", descriptionAr: "وصف العمل 1" },
+// You can add as many as you want.
+const galleryImages = [
+    {
+        src: "https://via.placeholder.com/800x600?text=Work+Image+1",
+        altEn: "Project 1",
+        altAr: "مشروع 1",
+        descriptionEn: "Example of our interior painting work.",
+        descriptionAr: "مثال على أعمال الدهان الداخلي."
+    },
+    {
+        src: "https://via.placeholder.com/800x600?text=Work+Image+2",
+        altEn: "Project 2",
+        altAr: "مشروع 2",
+        descriptionEn: "Example of our exterior painting project.",
+        descriptionAr: "مثال على مشروع دهان خارجي."
+    },
+    // Add more images here as you upload them
+];
+
+// ========================================
 // GLOBAL VARIABLES
 // ========================================
 let currentLang = 'en';
@@ -231,6 +266,7 @@ function updateLanguage() {
     updateElementById('nav-home', t.navHome);
     updateElementById('nav-products', t.navProducts);
     updateElementById('nav-contact', t.navContact);
+    updateElementById('nav-gallery', t.navGallery);
     
     // Update home page elements
     updateElementById('hero-title', t.heroTitle);
@@ -252,8 +288,8 @@ function updateLanguage() {
     // Update products page
     updateElementById('featured-title', t.featuredTitle);
     updateElementById('view-all-btn', t.viewAllBtn);
-    updateElementById('page-title', t.pageTitle);
-    updateElementById('page-subtitle', t.pageSubtitle);
+    updateElementById('products-page-title', t.productsPageTitle);
+    updateElementById('products-page-subtitle', t.productsPageSubtitle);
     updateElementById('filter-title', t.filterTitle);
     updateElementById('filter-all', t.filterAll);
     updateElementById('filter-premium', t.filterPremium);
@@ -261,6 +297,8 @@ function updateLanguage() {
     updateElementById('filter-sale', t.filterSale);
     
     // Update contact page
+    updateElementById('contact-page-title', t.contactPageTitle);
+    updateElementById('contact-page-subtitle', t.contactPageSubtitle);
     updateElementById('contact-info-title', t.contactInfoTitle);
     updateElementById('contact-info-desc', t.contactInfoDesc);
     updateElementById('contact-whatsapp-title', t.contactWhatsappTitle);
@@ -276,6 +314,10 @@ function updateLanguage() {
     updateElementById('label-message', t.labelMessage);
     updateElementById('submit-btn', t.submitBtn);
     
+    // Update gallery page
+    updateElementById('gallery-page-title', t.galleryPageTitle);
+    updateElementById('gallery-page-subtitle', t.galleryPageSubtitle);
+    
     // Update location
     updateElementById('location-title', t.locationTitle);
     updateElementById('location-subtitle', t.locationSubtitle);
@@ -289,6 +331,7 @@ function updateLanguage() {
     updateElementById('footer-home', t.footerHome);
     updateElementById('footer-products', t.footerProducts);
     updateElementById('footer-contact', t.footerContact);
+    updateElementById('footer-gallery', t.footerGallery);
     updateElementById('footer-contact-title', t.footerContactTitle);
     updateElementById('footer-text', t.footerText);
     
@@ -302,7 +345,7 @@ function updateLanguage() {
 function updateElementById(id, text) {
     const element = document.getElementById(id);
     if (element) {
-        element.textContent = text;
+        element.innerHTML = text; // Use innerHTML to support <br>
     }
 }
 
@@ -357,6 +400,29 @@ function renderProducts(containerId, productsToShow = products, limit = null) {
             </div>
         `;
         container.appendChild(productCard);
+    });
+}
+
+// ========================================
+// RENDER GALLERY
+// ========================================
+function renderGallery() {
+    const container = document.getElementById('gallery-container');
+    if (!container) return;
+    
+    container.innerHTML = '';
+    
+    galleryImages.forEach(image => {
+        const alt = currentLang === 'en' ? image.altEn : image.altAr;
+        const desc = currentLang === 'en' ? image.descriptionEn : image.descriptionAr;
+        
+        const galleryItem = document.createElement('div');
+        galleryItem.className = 'gallery-item';
+        galleryItem.innerHTML = `
+            <img src="${image.src}" alt="${alt}">
+            <div class="gallery-desc">${desc}</div>
+        `;
+        container.appendChild(galleryItem);
     });
 }
 
@@ -427,6 +493,7 @@ function toggleLanguage() {
     // Re-render products
     const productsContainer = document.getElementById('products-container');
     const featuredContainer = document.getElementById('featured-products');
+    const galleryContainer = document.getElementById('gallery-container');
     
     if (productsContainer) {
         const filteredProducts = currentFilter === 'all' 
@@ -437,6 +504,10 @@ function toggleLanguage() {
     
     if (featuredContainer) {
         renderProducts('featured-products', products, 3);
+    }
+    
+    if (galleryContainer) {
+        renderGallery();
     }
 }
 
@@ -463,6 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Render products based on page
     const productsContainer = document.getElementById('products-container');
     const featuredContainer = document.getElementById('featured-products');
+    const galleryContainer = document.getElementById('gallery-container');
     
     if (productsContainer && !featuredContainer) {
         // Full products page
@@ -470,6 +542,9 @@ document.addEventListener('DOMContentLoaded', function() {
     } else if (featuredContainer) {
         // Home page - show only 3 featured products
         renderProducts('featured-products', products, 3);
+    } else if (galleryContainer) {
+        // Gallery page
+        renderGallery();
     }
     
     console.log('✅ Website initialized successfully!');
